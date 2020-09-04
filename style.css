@@ -1,0 +1,38 @@
+#image img {
+    width: 200px;
+}
+
+#product{
+    display: flex;
+    flex-direction: row;
+}
+
+h2{
+    margin: 0;
+
+}
+
+#prodinfo{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+
+
+
+
+#rel1 img, #rel2 img, #rel3 img, #rel4 img{
+    width: 150px;
+}
+
+#rel1, #rel2, #rel3, #rel4{
+    float: left;
+    margin-right: 10px;
+}
+
+
+button{
+    width: 100px;
+    height: 40px;
+}
