@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://52.19.16.4/Assets/EnvScript/envscript.js"></script>
 </head>
 <body>
     <h1>Test Shop</h1>
@@ -19,10 +20,10 @@
         <h2>Nike Air Force 1</h2>
         <p id="price">500,- kr.</p>
         <div id="envbrand">
-            <?php
-            $response = file_get_contents("http://52.19.16.4/get/5154876599586/?url=http://localhost:3400/");
-            echo($response);
-            ?>
+            <!-- <?php
+            // $response = file_get_contents("http://52.19.16.4/get/5154876599586/?url=http://testshop.cosby.dk/");
+            // echo($response);
+            ?> -->
         </div>
         <button>Add to cart</button>
         </div>
@@ -52,6 +53,10 @@
         </div>
     </div>
 </div>
+    
+<script>
+    EnvBrand.show(5154876599586);
+</script>
     
 </body>
 </html>
