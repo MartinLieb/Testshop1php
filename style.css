@@ -1,10 +1,67 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #image img {
-    width: 200px;
+    width: 500px;
 }
 
 #product{
     display: flex;
     flex-direction: row;
+}
+
+#prod-row{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.header {
+    padding: 1px;
+    text-align: center;
+    background: white;
+    color: black;
+    font-size: 15px;
+}
+
+.header-nav{
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+  /* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.imgalt{
+    width: 150px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 h2{
@@ -15,12 +72,8 @@ h2{
 #prodinfo{
     display: flex;
     flex-direction: column;
-    padding-left: 10px;
+    padding-left: 100px;
 }
-
-
-
-
 
 #rel1 img, #rel2 img, #rel3 img, #rel4 img{
     width: 150px;
@@ -32,7 +85,56 @@ h2{
 }
 
 
-button{
+#cart-btn{
     width: 100px;
     height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
+#envbrand{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}

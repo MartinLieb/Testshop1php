@@ -8,28 +8,49 @@
     <script src="http://52.19.16.4/Assets/EnvScript/envscript.js"></script>
 </head>
 <body>
-    <h1>Test Shop</h1>
 
-<div>
+<div class="header">
+  <h3>Test Shop</h3>
+</div>
+
+<div class="header-nav">
+    <ul>
+    <li><a href="#">Herrer</a></li>
+    <li><a href="#">Damer</a></li>
+    <li><a href="#">Børn</a></li>
+    <li><a href="#">Kundeservice</a></li>
+    </ul>
+</div>
+
+<div id="prod-row">
 
     <div id="product">
+        <div id=imgalt>
+        <img class= "imgalt" src="/images/air_force_1_2.jpg" alt="air force">
+        <img class= "imgalt" src="/images/air_force_1_3.jpg" alt="air force">
+        </div>
         <div id="image">
         <img src="/images/air_force_1.jpg" alt="air force">
         </div>
-        <div id ="prodinfo">
-        <h2>Nike Air Force 1</h2>
-        <p id="price">500,- kr.</p>
-        <div id="envbrand">
-            <!-- <?php
-            // $response = file_get_contents("http://52.19.16.4/get/5154876599586/?url=http://testshop.cosby.dk/");
-            // echo($response);
-            ?> -->
-        </div>
-        <button>Add to cart</button>
-        </div>
-
-
     </div>
+
+    <div id ="prodinfo">
+        <h1>Nike Air Force 1</h1>
+        <h2 id="price">500,- kr.</h2>
+        <div id="envbrand"></div>
+
+        <div class="dropdown">
+            <button onclick="btnDropdown()" class="dropbtn">Vælg størrelse</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#">Størrelse 41</a>
+                <a href="#">Størrelse 42</a>
+                <a href="#">Størrelse 43</a>
+            </div>
+
+        </div>
+        <button id="cart-btn">Add to cart</button>
+    </div>
+
 </div>
 
 <div>
@@ -58,5 +79,6 @@
     EnvBrand.show(5154876599586);
 </script>
     
+<script src="index.js"></script>
 </body>
 </html>

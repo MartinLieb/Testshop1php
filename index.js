@@ -1,10 +1,19 @@
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function btnDropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
 
-var url = 'http://52.19.16.4/get/5154876599586/?url=' + window.location.href;
-
-fetch(url).then((response) => {
-    return response.text();
-}).then(html => {
-    document.getElementById("envbrand").innerHTML = html;
-}).catch(err => {
-    document.getElementById("envbrand").innerHTML = "Kunne ikke få fat i miljødata på dette produkt."
-})
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
