@@ -76,7 +76,7 @@
 </div>
     
 <script>
-    EnvBrand.show(5154876599586);
+    EnvBrand.show(123);
 </script>
     
 <script src="index.js"></script>
