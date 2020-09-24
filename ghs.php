@@ -11,7 +11,7 @@
     // $webshopUrl = urlencode($webshopUrl);
 
     // send destination url tilbage til javascript - barcode, webshopUrl, hash
-    echo "https://www.greenheartshopping.com/demo/get?barcode=$barcode&url=$webshopUrl&hash=$hash";
+    echo "https://greenheartshopping.com/demo/get?barcode=$barcode&url=$webshopUrl&hash=$hash";
 
     // echo "https://smallstepsmatter.dk/get?barcode=$barcode&url=$webshopUrl&hash=$hash";
 
