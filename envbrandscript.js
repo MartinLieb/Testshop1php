@@ -18,6 +18,7 @@ fetch("ghs.php?barcode=123&url=" + window.location.href)
         xhr.open("post", "https://greenheartshopping.com/demo/get", true);
         xhr.setRequestHeader("Authorization", "Basic " + btoa("green:KormflaX3r"));
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
         xhr.onload = function () {
             if (xhr.status === 200) {
                 // show xhr.responseText somehow
