@@ -19,7 +19,7 @@
     <div class="header-nav">
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="product/product.php">Produkt</a></li>
+            <li><a href="products/product.php">Produkt</a></li>
         </ul>
     </div>
 
