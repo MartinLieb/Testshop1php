@@ -15,7 +15,7 @@ fetch("ghs.php?barcode=123&url=" + window.location.href)
         let newurl = new URL(url);
 
         var xhr = new XMLHttpRequest();
-        xhr.open("post", url, true, "green", "KormflaX3r");
+        xhr.open("post", newurl.href, true, "green", "KormflaX3r");
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onload = function () {
             if (xhr.status === 200) {
