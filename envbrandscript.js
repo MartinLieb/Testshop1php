@@ -15,7 +15,8 @@ fetch("ghs.php?barcode=123&url=" + window.location.href)
         let newurl = new URL(url);
 
         var xhr = new XMLHttpRequest();
-        xhr.open("post", "https://greenheartshopping.com/demo/get", true, "green", "KormflaX3r");
+        xhr.open("post", "https://greenheartshopping.com/demo/get", true);
+        xhr.setRequestHeader("Authorization", "Basic " + btoa("green:KormflaX3r"));
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onload = function () {
             if (xhr.status === 200) {
