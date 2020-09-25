@@ -76,7 +76,7 @@ function requestEnvBrand(body) {
         mode: "no-cors",
 
     })
-        .then(res => res.text())
+        .then(res => res.json())
         .then(data => {
             console.log("DATA: " + data);
         })
