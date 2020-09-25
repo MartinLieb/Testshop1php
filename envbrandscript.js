@@ -24,6 +24,7 @@ fetch("ghs.php?barcode=123&url=" + window.location.href)
             }),
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, // this line is important, if this content-type is not set it wont work
             body: newurl.search,
+            mode: "no-cors",
 
         })
             .then(res => res.text())
