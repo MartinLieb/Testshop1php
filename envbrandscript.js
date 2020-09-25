@@ -73,7 +73,7 @@ function requestEnvBrand(body) {
         credentials: 'include',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, // this line is important, if this content-type is not set it wont work
         body: body,
-        mode: "no-cors",
+        //mode: "no-cors",
 
     })
         .then(res => res.text())
