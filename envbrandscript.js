@@ -70,6 +70,7 @@ function requestEnvBrand(body) {
         headers: new Headers({
             "Authorization": 'Basic ' + btoa('green:KormflaX3r')
         }),
+        credentials: 'include',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, // this line is important, if this content-type is not set it wont work
         body: body,
         mode: "no-cors",
