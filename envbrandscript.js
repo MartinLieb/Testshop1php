@@ -76,14 +76,15 @@ function requestEnvBrand(body) {
         mode: "no-cors",
 
     })
-        .then(res => res.text())
-        .then(data => {
-            console.log("DATA: " + data);
-        })
-        .catch(err => {
-            console.log("2: no brand for you pal");
-            console.log(err);
-        })
+    .then(res => res.text())
+    .then(data => {
+        console.log(typeof data);
+        console.log("DATA: " + data);
+    })
+    .catch(err => {
+        console.log("2: no brand for you pal");
+        console.log(err);
+    })
 }
 
 
