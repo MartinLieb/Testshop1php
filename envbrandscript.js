@@ -78,10 +78,11 @@ function requestEnvBrand(body) {
     })
     .then(res => res.text())
     .then(data => {
-        console.log(typeof data);
-        console.log("DATA: " + data);
+        // show xhr.responseText somehow
+        document.getElementById('envbrand').innerHTML = data;
     })
     .catch(err => {
+        document.getElementById('envbrand').innerHTML = "FEJL";
         console.log("2: no brand for you pal");
         console.log(err);
     })
