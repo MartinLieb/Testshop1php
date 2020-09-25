@@ -82,9 +82,9 @@ function requestEnvBrand(body) {
         document.getElementById('envbrand').innerHTML = data;
     })
     .catch(err => {
+        
         document.getElementById('envbrand').innerHTML = "FEJL";
-        console.log("2: no brand for you pal");
-        console.log(err);
+        
     })
 }
 
