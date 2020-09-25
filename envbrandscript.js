@@ -17,9 +17,8 @@ fetch("ghs.php?barcode=123&url=" + window.location.href)
         var xhr = new XMLHttpRequest();
         xhr.open("post", "https://greenheartshopping.com/demo/get", true, "green", "KormflaX3r");
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
         xhr.onload = function () {
-            if (xhr.status === 200) {
+            if (xhr.readyState === 4 && xhr.status === 200) {
                 console.log("STATUS 200");
                 // show xhr.responseText somehow
                 document.getElementById('envbrand').innerHTML = xhr.responseText;
@@ -33,7 +32,9 @@ fetch("ghs.php?barcode=123&url=" + window.location.href)
             }
         }
 
-        xhr.send(newurl.search.replace("?", ""));
+        var reqBody = newurl.search.replace("?", "");
+
+        xhr.send(reqBody);
 
         // fetch(newurl.href, {
         //     method: 'POST',
