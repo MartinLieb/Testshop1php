@@ -18,10 +18,8 @@
 
     <div class="header-nav">
         <ul>
+            <li><a href="/">Home</a></li>
             <li><a href="product/product.php">Produkt</a></li>
-            <li><a href="#">Damer</a></li>
-            <li><a href="#">Børn</a></li>
-            <li><a href="#">Kundeservice</a></li>
         </ul>
     </div>
 
