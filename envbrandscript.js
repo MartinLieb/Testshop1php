@@ -16,22 +16,30 @@ fetch("ghs.php?barcode=123&url=" + window.location.href)
 
         var xhr = new XMLHttpRequest();
         xhr.open("post", "https://greenheartshopping.com/demo/get", true);
+        console.log("XHR OPEN");
         xhr.setRequestHeader("Authorization", "Basic " + btoa("green:KormflaX3r"));
+        console.log("AUTH HEADER");
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        console.log("CONTENT TYPE");
         xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+        console.log("ALLOW ORIGIN");
         xhr.onload = function () {
             if (xhr.status === 200) {
+                console.log("STATUS 200");
                 // show xhr.responseText somehow
                 document.getElementById('envbrand').innerHTML = xhr.responseText;
                 console.log("XHR STATUS TEXT (success) " + xhr.statusText);
             }
             else {
+                console.log("STATUS NOT 200");
                 // handle failure, status code in xhr.status)
                 document.getElementById('envbrand').innerHTML = "FEJL";
                 console.log("XHR STATUS TEXT (failure) " + xhr.statusText);
             }
         }
+        console.log("XHR SEND: " + newurl.search.replace("?", ""));
         xhr.send(newurl.search.replace("?", ""));
+        console.log("XHR SEND DONE");
 
         // fetch(newurl.href, {
         //     method: 'POST',
