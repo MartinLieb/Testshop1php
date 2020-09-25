@@ -8,7 +8,7 @@
 //     url = res;
 // });
 
-fetch("ghs.php?barcode=123&url=" + window.location.href)
+fetch("ghs.php?barcode=234&url=" + window.location.href)
     .then(res => res.text())
     .then(url => {
 
