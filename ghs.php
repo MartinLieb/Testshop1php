@@ -1,6 +1,7 @@
 <?php
 
-    $api_key = '35b4484e9e0171d69325657cec3cef85a8a5c3c78806fce54a7d4963f43229ca';
+    $api_key = '9b1b86aea6c605735a4df34da714639d023c6cfe508e55f453cf7ba34a479884';
+    
     $barcode = (int) $_GET['barcode']; // force int
 
     $webshopUrl = $_GET['url'];

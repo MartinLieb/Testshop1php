@@ -8,7 +8,7 @@
 //     url = res;
 // });
 
-fetch("ghs.php?barcode=123&url=https://www.cosby.dk/products/12")
+fetch("ghs.php?barcode=123&url=" + window.location.href)
     .then(res => res.text())
     .then(url => {
 
@@ -19,19 +19,25 @@ fetch("ghs.php?barcode=123&url=https://www.cosby.dk/products/12")
 
         fetch(newurl.href, {
             method: 'POST',
+            headers: new Headers({
+                "Authorization": `Basic ${base64.encode(`green:KormflaX3r`)}`
+            }),
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, // this line is important, if this content-type is not set it wont work
-            body: newurl.search
+            body: newurl.search,
+
         })
             .then(res => res.text())
             .then(data => {
                 console.log("DATA: " + data);
             })
             .catch(err => {
-                console.log("222::: no brand for you pal");
+                console.log("2: no brand for you pal");
+                console.log(err);
             })
 
     }).catch(err => {
         console.log("no brand for you pal");
+        console.log(err);
     });
 
 /*
