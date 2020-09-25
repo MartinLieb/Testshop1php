@@ -14,46 +14,30 @@ fetch("ghs.php?barcode=123&url=" + window.location.href)
 
         let newurl = new URL(url);
 
-        var xhr = new XMLHttpRequest();
-        xhr.open("post", "https://greenheartshopping.com/demo/get", true, "green", "KormflaX3r");
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onload = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                console.log("STATUS 200");
-                // show xhr.responseText somehow
-                document.getElementById('envbrand').innerHTML = xhr.responseText;
-                console.log("XHR STATUS TEXT (success) " + xhr.statusText);
-            }
-            else {
-                console.log("STATUS NOT 200");
-                // handle failure, status code in xhr.status)
-                document.getElementById('envbrand').innerHTML = "FEJL";
-                console.log("XHR STATUS TEXT (failure) " + xhr.statusText);
-            }
-        }
+        requestEnvBrand(newurl.search.replace("?", ""));
 
-        var reqBody = newurl.search.replace("?", "");
+        // var xhr = new XMLHttpRequest();
+        // xhr.open("post", "https://greenheartshopping.com/demo/get", true, "green", "KormflaX3r");
+        // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        // xhr.onload = function () {
+        //     if (xhr.readyState === 4 && xhr.status === 200) {
+        //         console.log("STATUS 200");
+        //         // show xhr.responseText somehow
+        //         document.getElementById('envbrand').innerHTML = xhr.responseText;
+        //         console.log("XHR STATUS TEXT (success) " + xhr.statusText);
+        //     }
+        //     else {
+        //         console.log("STATUS NOT 200");
+        //         // handle failure, status code in xhr.status)
+        //         document.getElementById('envbrand').innerHTML = "FEJL";
+        //         console.log("XHR STATUS TEXT (failure) " + xhr.statusText);
+        //     }
+        // }
 
-        xhr.send(reqBody);
+        // var reqBody = newurl.search.replace("?", "");
 
-        // fetch(newurl.href, {
-        //     method: 'POST',
-        //     headers: new Headers({
-        //         "Authorization": 'Basic' + btoa('green:KormflaX3r')
-        //     }),
-        //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, // this line is important, if this content-type is not set it wont work
-        //     body: newurl.search,
-        //     mode: "no-cors",
+        // xhr.send(reqBody);
 
-        // })
-        //     .then(res => res.text())
-        //     .then(data => {
-        //         console.log("DATA: " + data);
-        //     })
-        //     .catch(err => {
-        //         console.log("2: no brand for you pal");
-        //         console.log(err);
-        //     })
 
     }).catch(err => {
         console.log("no brand for you pal");
@@ -78,6 +62,28 @@ xhr.onload = function () {
 xhr.send()
 
 */
+
+function requestEnvBrand(body) {
+
+    fetch('https://greenheartshopping.com/demo/get', {
+        method: 'POST',
+        headers: new Headers({
+            "Authorization": 'Basic' + btoa('green:KormflaX3r')
+        }),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, // this line is important, if this content-type is not set it wont work
+        body: body,
+        mode: "no-cors",
+
+    })
+        .then(res => res.text())
+        .then(data => {
+            console.log("DATA: " + data);
+        })
+        .catch(err => {
+            console.log("2: no brand for you pal");
+            console.log(err);
+        })
+}
 
 
 
