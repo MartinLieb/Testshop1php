@@ -31,7 +31,7 @@ fetch("ghs.php?barcode=123&url=" + window.location.href)
                 console.log("XHR STATUS TEXT (failure) " + xhr.statusText);
             }
         }
-        xhr.send(newurl.search);
+        xhr.send(newurl.search.replace("?", ""));
 
         // fetch(newurl.href, {
         //     method: 'POST',
