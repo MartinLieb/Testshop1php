@@ -68,7 +68,7 @@ function requestEnvBrand(body) {
     fetch('https://greenheartshopping.com/demo/get', {
         method: 'POST',
         headers: new Headers({
-            "Authorization": 'Basic' + btoa('green:KormflaX3r')
+            "Authorization": 'Basic ' + btoa('green:KormflaX3r')
         }),
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, // this line is important, if this content-type is not set it wont work
         body: body,
