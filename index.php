@@ -27,17 +27,17 @@
 
         <div id="product">
             <div id=imgalt>
-                <img class="imgalt" src="/images/air_force_1_2.jpg" alt="air force">
-                <img class="imgalt" src="/images/air_force_1_3.jpg" alt="air force">
+                <img class="imgalt" src="/images/puma_smash_v2_3.jpg" alt="puma smash">
+                <img class="imgalt" src="/images/puma_smash_v2_2.jpg" alt="puma smash">
             </div>
             <div id="image">
-                <img src="/images/air_force_1.jpg" alt="air force">
+                <img src="/images/puma_smash_v2.jpg" alt="puma smash">
             </div>
         </div>
 
         <div id="prodinfo">
-            <h1>Nike Air Force 1</h1>
-            <h2 id="price">500,- kr.</h2>
+            <h1>Puma Smash V2</h1>
+            <h2 id="price">600,- kr.</h2>
 
             <div id="envbrand"></div>
 
@@ -59,20 +59,20 @@
         <h3>Relaterede produkter</h3>
         <div id="relimgs">
             <div id=rel1>
-                <img src="/images/air_force_1.jpg" alt="air force">
-                <p>Nike Air Force 1</p>
+                <img src="/images/reebok_lite_2.jpg" alt="reebok lite 2.0">
+                <p>Reebok Lite 2.0</p>
             </div>
             <div id=rel2>
-                <img src="/images/air_force_1.jpg" alt="air force">
+                <img src="/images/air_force_1.jpg" alt="nike air force">
                 <p>Nike Air Force 1</p>
             </div>
             <div id=rel3>
-                <img src="/images/air_force_1.jpg" alt="air force">
+                <img src="/images/nike_downshifter.jpg" alt="nike downshifter">
                 <p>Nike Air Force 1</p>
             </div>
             <div id=rel4>
-                <img src="/images/air_force_1.jpg" alt="air force">
-                <p>Nike Air Force 1</p>
+                <img src="/images/new_balance_wl373.jpg" alt="new balance wl373">
+                <p>New Balance WL373</p>
             </div>
         </div>
     </div>
